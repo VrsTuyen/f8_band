@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: #333;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+}
+
+/* Article */
+h1 {
+    line-height: 2rem;
+}
+
+article {
+    padding: 0 16px;
+    line-height: 1.6rem;
+}
+
+article img {
+    width: 640px;
+    max-width: 100%;
+    display: block;
+    margin: 32px auto;
+}
+.navbar-icon-mobile {
+    width: 28px;
+    fill: #fff;
+    display: none;
+    line-height: 28px;
+}
+.navbar-icon-mobile:hover{
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 100%;
+    background: #fff;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.nav-close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    float: right;
+    padding: 8px;
+}
+.nav-close:hover{
+    cursor: pointer;
+}
+.svg-close {
+    width: 28px;
+    height: 28px;
+    float: right;
+    z-index: 1
+}
+
+.nav__mobile-list {
+    color: #000;
+    list-style: none;
+    width: 100%;
+    padding: 0 4px;
+    /* margin: 0; */
+    position: absolute;
+    margin-top: 48px;
+}
+
+
+.nav__mobile-link {
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav__mobile-link:hover {
+    background-color: #ccc;
+}
+
+.nav__checkbox:checked ~ .overlay{
+    display: block;
+}
+.nav__checkbox:checked ~ .nav__mobile{
+    transform: translateX(0%);
+    opacity: 1;
+}
+@media (max-width: 1023px) {
+    .navbar-icon-mobile {
+        display: block;
+        margin-left: 12px;
+    }
+
+    .nav__pc {
+        display: none;
+    }
+}
+@keyframes faceIn {
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+    }
+}

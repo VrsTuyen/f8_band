@@ -1,0 +1,66 @@
+@media (max-width: 46.1875em) {
+
+    .s-full-width,
+    .s-col-full {
+        width: 100% !important;
+    }
+
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search-icon {
+        display: none;
+    }
+
+    #header>#nav>li {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    #nav>li:first-child a {
+        display: inline-block;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background: #fff;
+    }
+
+    #nav .subnav li:hover a {
+        background: #d7000f;
+    }
+
+    #nav .subnav a {
+        padding: 15px 40px;
+
+    }
+
+    .people {
+        width: 100%;
+    }
+
+    .buy-tickets {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .input #name,
+    .input #email {
+        width: 100%;
+    }
+
+    .input #name {
+        margin: 4px 0;
+    }
+
+    .about-you {
+        padding-top: 16px;
+    }
+}
